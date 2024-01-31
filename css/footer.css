@@ -1,0 +1,19 @@
+.footer-conteiner {
+   background-color: #1E1E1E;
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+   box-shadow: -3px -3px 1em rgb(117, 117, 117);
+   box-sizing: border-box;
+   padding: 20px;
+   height: 88px;
+   position: absolute;
+   bottom: 0px;
+   width: 100%;
+  }
+  
+ 
+  .github,
+  .linkedin {
+     width: 48px;
+  }

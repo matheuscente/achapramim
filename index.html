@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP</title>
+    <link rel="preload" href="/css/style.min.css" as="style" />
+    <link rel="preload" href="/js/script.min.js" as="script" />
+    <link rel="stylesheet" href="/css/style.min.css">
+    <script src="/js/script.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <meta name="description" content="encontre cidades pelo CEP, ou o CEP pela cidade, rápido e fácil!">
+</head>
+
+<body>
+    <div id="full-page">
+        <header class="header-conteiner">
+            <div class="logo-conteiner">
+                <img class="logo-img" src="/imagens/logo/logo.png" alt="logo so site" width="600" height="303">
+            </div>
+
+
+            <nav class="header-list-conteiner nav-header">
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+
+                <ul class="header-list font-paragrafo">
+                    <li><a class="btn-header">Busca cep</a></li>
+                    <li><a class="btn-header">Busca DDD</a></li>
+                    <li><a class="btn-header">sobre nós</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main class="home">
+            <article class="flex-home">
+                <div class='home-content'>
+                    <h1 class="font-principal">BUSCA CEP</h1>
+                    <p class="font-paragrafo">Neste serviço, poderá procurar um cep pelo endereço ou procurar um
+                        endereço
+                        pelo cep.</p>
+                    <button class="btn btn-usar">usar</button>
+                </div>
+
+                <div class='home-content'>
+                    <h1 class="font-principal">BUSCA DDD</h1>
+                    <p class="font-paragrafo">Neste serviço, poderá procurar uma cidade pelo DDD.</p>
+                    <button class="btn btn-usar">usar</button>
+                </div>
+            </article>
+
+            <article class="busca hide">
+                <div>
+                    <div class="escolha-radio">
+                        <h1>Buscar por:</h1>
+                        <div class="radio-conteiner">
+                            <div>
+                                <label for="radio-cep" class="font-paragrafo">cep</label>
+                                <input class="radio-escolha" type="radio" name="escolha" id="radio-cep" value="cep">
+                            </div>
+                            <div>
+                                <label for="radio-endereco" class="font-paragrafo">endereço</label>
+                                <input class="radio-escolha" type="radio" name="escolha" id="radio-endereco"
+                                    value="endereco">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="font-paragrafo hide formulario ">
+                            <div class="input-conteiner">
+                                <label for="cep">CEP:</label>
+                                <input class="imput font-paragrafo" type="number" name="cep" id="cep"
+                                    placeholder="86430000">
+                            </div>
+                            <div class="botoes">
+                                <input class="btn" type="submit" id="enviar-cep" value="pesquisar">
+                                <button class="voltar btn">voltar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <form class="formulario hide endereco" action="">
+                        <div class="font-paragrafo input-conteiner">
+                            <label class="label-input" for="rua-form">Rua:</label>
+                            <input class="rua font-paragrafo imput" type="text" id="rua-form" name="rua"
+                                placeholder="rua das graças">
+                        </div>
+                        <div class="font-paragrafo input-conteiner">
+                            <label class="label-input" for="cidade-form">Cidade:</label>
+                            <input class="cidade font-paragrafo imput" type="text" id="cidade-form" name="cidade"
+                                placeholder="blumenau">
+                        </div>
+                        <div class="font-paragrafo input-conteiner">
+                            <label class="label-input" for="estado-form">Estado:</label>
+                            <input class="estado font-paragrafo imput" type="text" id="estado-form" name="rua"
+                                placeholder="SC">
+                        </div>
+                        <div class="botoes">
+                            <input class="btn" type="submit" value="pesquisar" id="pesquisar-endereco">
+                            <button class="voltar btn">voltar</button>
+                        </div>
+                    </form>
+                    <div class="result">
+
+                    </div>
+            </article>
+
+            <article class="busca hide">
+                <form class="font-paragrafo formulario" action="">
+                    <div class="input-conteiner">
+                        <label for="ddd">DDD:</label>
+                        <input class="imput font-paragrafo" type="number" name="ddd" id="ddd" placeholder="43">
+                    </div>
+                    <div class="botoes">
+                        <input class="btn" type="submit" id="enviar-DDD" value="pesquisar">
+                        <button class="voltar btn">voltar</button>
+                    </div>
+                </form>
+                <div class="result"></div>
+
+            </article>
+
+            <article class="sobre-mim hide">
+                <div class="descricao">
+                    <h1 class="font-principal">Quem sou eu?</h1>
+
+                    <p class="font-paragrafo sobre-paragrafo">Meu nome é Vicente Matheus e moro no interior do Paraná.
+                        Atualmente
+                        estou
+                        cursando o quinto semestre em Engenharia de Software na Unicesumar. Além disso, estou me
+                        aventurando no desenvolvendo front-end.</p>
+                    <p class="font-paragrafo sobre-paragrafo">Neste projeto, resolvi botar em prática todo meu
+                        conhecimento
+                        adquirido
+                        até agora, com foco principal no JavaScript.</p>
+                    <p class="font-paragrafo sobre-paragrafo">A parte de busca endereço pelo DDD não foi completada pois
+                        não
+                        encontrei
+                        uma API que disponibilizasse os dados para consumo.</p>
+                </div>
+
+                <div class="contato-descricao">
+                    <p class="font-paragrafo sobre-paragrafo">Tenho vontade de me aventurar em um freelance e adquirir
+                        mais
+                        conhecimento
+                        prático na profissão.</p>
+                    <span class="font-paragrafo sobre-paragrafo">Que tal entrar em contato para conversarmos?</span>
+                    <div class="sobre-contato">
+                        <div class="sobre-img-conteiner">
+                            <a href="https://www.linkedin.com/in/vicente-dos-santos-b48805196/" target="blank"><img src="/imagens/icones/linkedin-list.svg" alt="icone do linkedin"></a>
+                        </div>
+                        <div class="sobre-img-conteiner">
+                            <a href="https://wa.me/5543996770521" target="_blank"><img src="/imagens/icones/icons8-whatsapp (1).svg" alt="icone do whatsapp"></a>
+                        </div>
+                        <div class="sobre-img-conteiner">
+                            <a class="email-icon" href="mailto:matheus31102001@gmail.com" target="_blank"><img src="/imagens/icones/email.svg" alt="icone do email"></a>
+                        </div>
+                        <a class="portifolio font-paragrafo" href="https://matheuscente.github.io/curriculo/" target="_blank">Portifólio</a>
+                    </div>
+                    <button class="voltar btn">voltar</button>
+                </div>
+
+            </article>
+        </main>
+    </div>
+    <footer class="footer-conteiner">
+        <div class="linkedin">
+            <a href="https://www.linkedin.com/in/vicente-dos-santos-b48805196/" target="blank"><img
+                    src="/imagens/icones/linkedin.svg" width="48" height="48" alt="logo linkedin"></a>
+        </div>
+        <div class="github">
+            <a href="https://github.com/matheuscente" target='blank'><img src="/imagens/icones/github.svg" width="98"
+                    height="96" alt="logo github"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
