@@ -241,7 +241,9 @@ btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart', toggleMenu)
 
 logoBtn.addEventListener('click', () => {
-    nav.classList.toggle('show')
+    if(nav.classList.contains('show')) {
+        nav.classList.remove('show')
+    }
     sobre.classList.add('hide')
         removeResult()
         removeInput()
@@ -254,7 +256,9 @@ logoBtn.addEventListener('click', () => {
 })
 
 logoBtn.addEventListener('touchstart', () => {
-    nav.classList.toggle('show')
+    if(nav.classList.contains('show')) {
+        nav.classList.remove('show')
+    }
     event.preventDefault()
     sobre.classList.add('hide')
         removeResult()
