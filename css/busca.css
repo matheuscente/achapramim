@@ -1,5 +1,5 @@
 .spanResult {
-    width: 400px;
+    max-width: 400px;
     padding-bottom: 10px;
     display: block;
     border-bottom: 2px solid rgb(231, 231, 231);

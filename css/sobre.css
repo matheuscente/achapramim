@@ -56,3 +56,15 @@
     margin: 0 auto;
     display: inline-block;
 }
+
+@media (max-width: 400px) {
+    .sobre-contato {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .sobre-img-conteiner a img{
+        margin: 0 auto;
+    }
+}

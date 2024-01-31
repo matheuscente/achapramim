@@ -135,7 +135,7 @@ function toggleMenu(event) {
     if (event.type === 'touchstart') {
         event.preventDefault()
     }
-    const nav = document.querySelector('.nav-header')
+    
     nav.classList.toggle('show')
 }
 
@@ -224,7 +224,8 @@ const enviar = document.getElementById('enviar-cep'),
     btnMobile = document.getElementById('btn-mobile'),
     sobre = document.querySelector('.sobre-mim'),
     logoBtn = document.querySelector('.botao-logo'),
-    btnDDD = document.getElementById('enviar-DDD')
+    btnDDD = document.getElementById('enviar-DDD'),
+    nav = document.querySelector('.nav-header')
 
     btnDDD.addEventListener('click', (btn) => {
         btn.preventDefault()
@@ -331,6 +332,10 @@ btnUsar.forEach((botao, i) => {
 
 btnHeader.forEach((botao, i) => {
     botao.addEventListener('click', () => {
+        console.log('clicou')
+        if(window.innerWidth <= 900) {
+           nav.classList.toggle('show')
+        }
         if (!radio[0].checked && !radio[1].checked) {
             radio[0].checked = true
         }
@@ -339,13 +344,15 @@ btnHeader.forEach((botao, i) => {
         if (i !== indice) {
             removeInput()
             removeResult()
-            toggleMenu(event)
             indice = i
         }
         indice = i
 
     })
     botao.addEventListener('touchstart', () => {
+        if(window.innerWidth <= 900) {
+            nav.classList.toggle('show')
+        }
         event.preventDefault()
         if (!radio[0].checked && !radio[1].checked) {
             radio[0].checked = true
@@ -355,7 +362,6 @@ btnHeader.forEach((botao, i) => {
         if (i !== indice) {
             removeInput()
             removeResult()
-            toggleMenu()
             indice = i
         }
         indice = i
