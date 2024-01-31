@@ -241,6 +241,7 @@ btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart', toggleMenu)
 
 logoBtn.addEventListener('click', () => {
+    nav.classList.toggle('show')
     sobre.classList.add('hide')
         removeResult()
         removeInput()
@@ -253,6 +254,7 @@ logoBtn.addEventListener('click', () => {
 })
 
 logoBtn.addEventListener('touchstart', () => {
+    nav.classList.toggle('show')
     event.preventDefault()
     sobre.classList.add('hide')
         removeResult()
@@ -332,7 +334,6 @@ btnUsar.forEach((botao, i) => {
 
 btnHeader.forEach((botao, i) => {
     botao.addEventListener('click', () => {
-        console.log('clicou')
         if(window.innerWidth <= 900) {
            nav.classList.toggle('show')
         }
