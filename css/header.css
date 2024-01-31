@@ -1,13 +1,18 @@
 .header-conteiner {
-    background-color: #fff;
+    background-color: var(--cor0);
     box-sizing: border-box;
     height: 100px;
      padding: 15px 30px;
      justify-content: space-between;
      display: flex;
      align-items: center;
-     border-bottom: 3px solid black;
-     box-shadow: 3px 3px 1em #c9c9c9;
+     border-bottom: 3px solid var(--cor7);
+     box-shadow: 3px 3px 1em var(--cor3);
+ }
+
+ .botao-logo {
+    border: none;
+    cursor: pointer;
  }
 
 
@@ -84,7 +89,7 @@
       height: 0px;
       z-index: 99;
       transition: .6s;
-      background-color: #fff;
+      background-color: var(--cor0);
       visibility: hidden;
       overflow-y: hidden;
    }

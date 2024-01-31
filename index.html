@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEP</title>
-    <link rel="preload" href="css/style.min.css" as="style" />
-    <link rel="preload" href="js/script.min.js" as="script" />
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/script.min.js" defer></script>
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
@@ -19,16 +19,16 @@
     <div id="full-page">
         <header class="header-conteiner">
             <div class="logo-conteiner">
-                <img class="logo-img" src="imagens/logo/logo.png" alt="logo so site" width="600" height="303">
+                <a class="botao-logo" aria-label="botao voltar a página inicial"><img class="logo-img" src="imagens/logo/logo.png" alt="logo do site" width="600" height="303"></a>
             </div>
 
 
             <nav class="header-list-conteiner nav-header">
-                <button id="btn-mobile">
+                <button id="btn-mobile" aria-label="botão mostrar menu">
                     <span id="hamburguer"></span>
                 </button>
 
-                <ul class="header-list font-paragrafo">
+                <ul class="header-list font-paragrafo" aria-label="navegação primaria">
                     <li><a class="btn-header">Busca cep</a></li>
                     <li><a class="btn-header">Busca DDD</a></li>
                     <li><a class="btn-header">sobre nós</a></li>
@@ -38,7 +38,7 @@
         </header>
 
         <main class="home">
-            <article class="flex-home">
+            <article class="flex-home" aria-label="página-inicial">
                 <div class='home-content'>
                     <h1 class="font-principal">BUSCA CEP</h1>
                     <p class="font-paragrafo">Neste serviço, poderá procurar um cep pelo endereço ou procurar um
@@ -54,7 +54,7 @@
                 </div>
             </article>
 
-            <article class="busca hide">
+            <article class="busca hide" aria-label="buscar endereço pelo cep ou cep pelo endereço">
                 <div>
                     <div class="escolha-radio">
                         <h1>Buscar por:</h1>
@@ -71,19 +71,19 @@
                         </div>
                     </div>
                     <div>
-                        <form class="font-paragrafo hide formulario ">
+                        <form class="font-paragrafo hide formulario" aria-label="buscar pelo cep">
                             <div class="input-conteiner">
                                 <label for="cep">CEP:</label>
                                 <input class="imput font-paragrafo" type="number" name="cep" id="cep"
                                     placeholder="86430000">
                             </div>
                             <div class="botoes">
-                                <input class="btn" type="submit" id="enviar-cep" value="pesquisar">
+                                <input class="btn" type="submit" id="enviar-cep" value="pesquisar" aria-label="botão pesquisar cep">
                                 <button class="voltar btn">voltar</button>
                             </div>
                         </form>
                     </div>
-                    <form class="formulario hide endereco" action="">
+                    <form class="formulario hide endereco" aria-label="buscar pelo endereço">
                         <div class="font-paragrafo input-conteiner">
                             <label class="label-input" for="rua-form">Rua:</label>
                             <input class="rua font-paragrafo imput" type="text" id="rua-form" name="rua"
@@ -100,7 +100,7 @@
                                 placeholder="SC">
                         </div>
                         <div class="botoes">
-                            <input class="btn" type="submit" value="pesquisar" id="pesquisar-endereco">
+                            <input class="btn" type="submit" value="pesquisar" id="pesquisar-endereco" aria-label="botão pesquisar endereço">
                             <button class="voltar btn">voltar</button>
                         </div>
                     </form>
@@ -109,14 +109,14 @@
                     </div>
             </article>
 
-            <article class="busca hide">
-                <form class="font-paragrafo formulario" action="">
+            <article class="busca hide" aria-label="buscar cidade pelo ddd">
+                <form class="font-paragrafo formulario">
                     <div class="input-conteiner">
                         <label for="ddd">DDD:</label>
                         <input class="imput font-paragrafo" type="number" name="ddd" id="ddd" placeholder="43">
                     </div>
                     <div class="botoes">
-                        <input class="btn" type="submit" id="enviar-DDD" value="pesquisar">
+                        <input class="btn" type="submit" id="enviar-DDD" value="pesquisar" aria-label= "botao pesquisar cidade">
                         <button class="voltar btn">voltar</button>
                     </div>
                 </form>
@@ -124,11 +124,11 @@
 
             </article>
 
-            <article class="sobre-mim hide">
+            <article class="sobre-mim hide" aria-label="sobre mim">
                 <div class="descricao">
                     <h1 class="font-principal">Quem sou eu?</h1>
 
-                    <p class="font-paragrafo sobre-paragrafo">Meu nome é Vicente Matheus e moro no interior do Paraná.
+                    <p class="font-paragrafo sobre-paragrafo">Meu nome é <strong>Vicente Matheus</strong> e moro no interior do Paraná.
                         Atualmente
                         estou
                         cursando o quinto semestre em Engenharia de Software na Unicesumar. Além disso, estou me
@@ -151,15 +151,15 @@
                     <span class="font-paragrafo sobre-paragrafo">Que tal entrar em contato para conversarmos?</span>
                     <div class="sobre-contato">
                         <div class="sobre-img-conteiner">
-                            <a href="https://www.linkedin.com/in/vicente-dos-santos-b48805196/" target="blank"><img src="imagens/icones/linkedin-list.svg" alt="icone do linkedin"></a>
+                            <a href="https://www.linkedin.com/in/vicente-dos-santos-b48805196/" target="blank"><img src="imagens/icones/linkedin-list.svg" alt="icone do linkedin" width="50" height="50" aria-label="botao redirecionando para o linkedin do autor do site"></a>
                         </div>
                         <div class="sobre-img-conteiner">
-                            <a href="https://wa.me/5543996770521" target="_blank"><img src="imagens/icones/icons8-whatsapp (1).svg" alt="icone do whatsapp"></a>
+                            <a href="https://wa.me/5543996770521" target="_blank"><img src="imagens/icones/icons8-whatsapp (1).svg" alt="icone do whatsapp" aria-label="botao redirecionando para o whatsapp do autor do site"></a>
                         </div>
                         <div class="sobre-img-conteiner">
-                            <a class="email-icon" href="mailto:matheus31102001@gmail.com" target="_blank"><img src="imagens/icones/email.svg" alt="icone do email"></a>
+                            <a class="email-icon" href="mailto:matheus31102001@gmail.com" target="_blank"><img src="imagens/icones/email.svg" alt="icone do email" width="50" height="50" aria-label="botao redirecionando para o email do autor do site"></a>
                         </div>
-                        <a class="portifolio font-paragrafo" href="https://matheuscente.github.io/curriculo/" target="_blank">Portifólio</a>
+                        <a class="portifolio font-paragrafo" href="https://matheuscente.github.io/curriculo/" target="_blank" aria-label="botao redirecionando para o portifólio do autor do site">Portifólio</a>
                     </div>
                     <button class="voltar btn">voltar</button>
                 </div>
@@ -170,10 +170,10 @@
     <footer class="footer-conteiner">
         <div class="linkedin">
             <a href="https://www.linkedin.com/in/vicente-dos-santos-b48805196/" target="blank"><img
-                    src="imagens/icones/linkedin.svg" width="48" height="48" alt="logo linkedin"></a>
+                    src="imagens/icones/linkedin.svg" width="48" height="48" alt="logo linkedin" aria-label="botao redirecionando para o linkedin do autor do site"></a>
         </div>
         <div class="github">
-            <a href="https://github.com/matheuscente" target='blank'><img src="imagens/icones/github.svg" width="98"
+            <a href="https://github.com/matheuscente" target='blank'><img src="imagens/icones/github.svg" aria-label="botao redirecionando para o github do autor do site" width="98"
                     height="96" alt="logo github"></a>
         </div>
     </footer>

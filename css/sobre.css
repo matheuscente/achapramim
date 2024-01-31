@@ -33,7 +33,7 @@
     border: 3px solid currentColor;
     padding: 5px 10px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: var(--cor0);
     line-height: 0px;
     height: fit-content;
 }
@@ -43,7 +43,7 @@
     transform: scale(1.08,1.08);
 }
 .portifolio:hover:last-child {
-    background-color: #f7f6f6;
+    background-color: var(--cor1);
 }
 
 .sobre-contato {

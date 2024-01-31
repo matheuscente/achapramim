@@ -1,5 +1,5 @@
 .footer-conteiner {
-   background-color: #1E1E1E;
+   background-color: var(--cor6);
    display: flex;
    justify-content: center;
    gap: 3rem;
