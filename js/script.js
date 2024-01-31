@@ -223,8 +223,18 @@ const enviar = document.getElementById('enviar-cep'),
     form = document.querySelectorAll('.formulario'),
     btnMobile = document.getElementById('btn-mobile'),
     sobre = document.querySelector('.sobre-mim'),
-    logoBtn = document.querySelector('.botao-logo')
+    logoBtn = document.querySelector('.botao-logo'),
+    btnDDD = document.getElementById('enviar-DDD')
 
+    btnDDD.addEventListener('click', (btn) => {
+        btn.preventDefault()
+        alert("Este serviço não está disponível!")
+    })
+
+    btnDDD.addEventListener('touchstart', (btn) => {
+        btn.preventDefault()
+        alert("Este serviço não está disponível!")
+    })
 
 btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart', toggleMenu)

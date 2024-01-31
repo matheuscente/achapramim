@@ -54,6 +54,9 @@
 
 
  @media (max-width: 900px) {
+    .header-conteiner {
+        margin-bottom: 3rem;
+    }
     .header-list li:hover {
         transform: scale(1,1);
     }
