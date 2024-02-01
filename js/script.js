@@ -146,7 +146,7 @@ async function getResult(url, btn) {
         const response = await fetch(url),
             data = await response.json()
         createElementCEP(conteinerClicked, returnResult(data))
-        if (data.erro == true) {
+        if (data.erro == true || data.length == 0) {
             if (btn.target == enviar) {
                 alert(' cep invalido ou nao existente')
 
@@ -162,6 +162,7 @@ async function getResult(url, btn) {
             alert(' cep invalido ou nao existente')
 
         } else if (btn.target == buscaEndereco) {
+            console.log(true)
             alert(' endereço invalido ou nao existente')
         }
         removeResult()
