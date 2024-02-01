@@ -277,6 +277,7 @@ buscaEndereco.addEventListener('click', (btn) => {
     searchResults(btn)
 })
 buscaEndereco.addEventListener('touchstart', (btn) => {
+    buscaEndereco.inputMode = none
     event.preventDefault()
     searchResults(btn)
 })
@@ -286,6 +287,7 @@ enviar.addEventListener('click', (btn) => {
 })
 
 enviar.addEventListener('touchstart', (btn) => {
+    buscaEndereco.inputMode = none
     event.preventDefault()
     searchResults(btn)
 })
