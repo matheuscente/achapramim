@@ -1,9 +1,11 @@
 import type { RouteRecordRaw } from "vue-router";
 import HomeLayout from "@/shared/layouts/HomeLayout.vue"
+import { Routes } from "./routeNames";
 
 export const routes: RouteRecordRaw[] = [
     {
-        path: "/",
+        name: Routes.home.name,
+        path: Routes.home.path,
         component: HomeLayout,
         meta: {
             title: "Acha pra mim!"
@@ -11,8 +13,8 @@ export const routes: RouteRecordRaw[] = [
 
         children: [
             {
-                name: "SearchCep",
-                path: "/search/cep",
+                name: Routes.cep.name,
+                path: Routes.cep.path,
                 component: () => import("@/modules/cep/views/CepView.vue"),
                 meta: {
                     title: "Busca cep"
@@ -20,8 +22,8 @@ export const routes: RouteRecordRaw[] = [
             },
 
             {
-                name: "SearchDDD",
-                path: "/search/ddd",
+                name: Routes.ddd.name,
+                path: Routes.ddd.path,
                 component: () => import("@/modules/ddd/views/DDDView.vue"),
                 meta: {
                     title: "Busca DDD"
@@ -29,8 +31,8 @@ export const routes: RouteRecordRaw[] = [
             },
 
             {
-                name: "About",
-                path: "/about",
+                name: Routes.about.name,
+                path: Routes.about.path,
                 component: () => import("@/modules/about/views/AboutView.vue"),
                 meta: {
                     title: "Sobre nós"
@@ -38,8 +40,8 @@ export const routes: RouteRecordRaw[] = [
             },
 
             {
-                path: "/:pathMatch(.*)*",
-                name: "NotFound",
+                name: Routes.notFound.name,
+                path: Routes.notFound.path,
                 component: () => import("@/shared/views/NotFoundView.vue"),
                 meta: {
                     title: "Página não encontrada!"

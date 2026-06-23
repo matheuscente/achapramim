@@ -1,6 +1,22 @@
 export const Routes = {
-    home: "Home",
-    cep: "CEPSearch",
-    ddd: "DDDSearch",
-    not_found: "NotFound"
+    home: {
+        name: "Home",
+        path: "/"
+    },
+    cep: {
+        name: "CEPSearch",
+        path: "/search/cep"
+    },
+    ddd: {
+        name: "DDDSearch",
+        path: "/search/ddd"
+    },
+    notFound: {
+        name: "NotFound",
+        path: "/:pathMatch(.*)*"
+    },
+    about: {
+        name: "About",
+        path: "/about"
+    }
 } as const
