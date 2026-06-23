@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import IconItem from './IconItem.vue';
-import { linkedinIconConfig, githubIconConfig } from '../configs/footer.ts';
+import IconItem from '@/shared/components/IconItem.vue';
+import { linkedinIconConfig, githubIconConfig } from '@/shared/components/footer/footer';
 </script>
 
 <style scoped></style>

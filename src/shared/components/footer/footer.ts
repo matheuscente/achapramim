@@ -1,4 +1,4 @@
-import type { IconItemProps } from "../types/types";
+import type { IconItemProps } from "@/shared/types/types";
 import linkedinIcon from "@/assets/images/linkedin.svg"
 import githubIcon from "@/assets/images/github.svg"
 
