@@ -1,0 +1,17 @@
+.font-principal {
+    color: var(--cor7);
+    font-family: 'Francois One';
+    font-weight: bold;
+    font-size: 2.188rem;
+    letter-spacing: 0.09rem;
+}
+
+
+.font-paragrafo {
+    font-family: arial;
+    color: var(--cor5);
+    font-size: 1.2rem;
+    letter-spacing: .09rem;
+    line-height: 1.3;
+    text-shadow: 0.1px 0.1px 0.1px var(--cor5);
+}
