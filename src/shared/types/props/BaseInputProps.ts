@@ -1,6 +1,6 @@
 import type { ErrorType } from "../types";
 
-export interface BaseInputProps<T> {
+export interface BaseInputProps {
     id: string,
     label: string,
     type: string,
@@ -8,5 +8,6 @@ export interface BaseInputProps<T> {
     disabled?: boolean,
     readOnly?: boolean,
     required?: boolean,
-    error?: ErrorType<T> | string
+    error?: string,
+    field: string
 }

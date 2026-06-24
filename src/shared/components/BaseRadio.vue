@@ -1,6 +1,8 @@
 <template>
     <div>
-        <legend v-if="props.legend"></legend>
+        <legend v-if="props.legend">
+            {{ props.legend }}
+        </legend>
 
         <label v-for="option in props.options" :key="option.value">
             <input type="radio" :name="props.name" :value="option.value" v-model="checked">
@@ -10,10 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseRadioProps } from '../types/types';
+import type { BaseRadioProps, SearchType } from '../types/types';
 
 const props = defineProps<BaseRadioProps>()
-const checked = defineModel<string>()
+const checked = defineModel<SearchType>()
+
 
 </script>
 

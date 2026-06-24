@@ -4,14 +4,21 @@ import { Routes } from "./routeNames";
 
 export const routes: RouteRecordRaw[] = [
     {
-        name: Routes.home.name,
-        path: Routes.home.path,
+        name: Routes.homeLayout.name,
+        path: Routes.homeLayout.path,
         component: HomeLayout,
-        meta: {
-            title: "Acha pra mim!"
-        },
 
         children: [
+
+            {
+                name: Routes.home.name,
+                path: Routes.home.path,
+                component: () => import("@/modules/home/views/HomeView.vue"),
+                meta: {
+                    title: "Acha pra mim!"
+                }
+            },
+
             {
                 name: Routes.cep.name,
                 path: Routes.cep.path,

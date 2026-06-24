@@ -1,7 +1,7 @@
 export const Routes = {
     home: {
         name: "Home",
-        path: "/"
+        path: ""
     },
     cep: {
         name: "CEPSearch",
@@ -18,5 +18,9 @@ export const Routes = {
     about: {
         name: "About",
         path: "/about"
+    },
+    homeLayout: {
+        name: "HomeLayout",
+        path: "/"
     }
 } as const
