@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import MenuItem from '@/shared/components/MenuItem.vue';
-import { headerProps, logoProps } from '@/shared/components/header/header.ts';
+import MenuItem from '@/shared/components/MenuItem/MenuItem.vue';
+import { headerProps, logoProps } from '@/shared/components/header/headerConfig';
 
 </script>
 

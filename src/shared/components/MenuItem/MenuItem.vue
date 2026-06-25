@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { MenuItemProps } from '../types/types';
+import type { MenuItemProps } from '@/shared/types/index';
 
 const props = defineProps<MenuItemProps>()
 </script>

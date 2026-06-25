@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseInputProps } from '../types/types';
+import type { BaseInputProps } from '@/shared/components/BaseInput/BaseInputProps';
 
 const props = defineProps<BaseInputProps>()
 const value = defineModel<string>()

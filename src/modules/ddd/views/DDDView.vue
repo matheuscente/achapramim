@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import BaseForm from '@/shared/components/BaseForm.vue';
+import BaseForm from '@/shared/components/BaseForm/BaseForm.vue';
 import { dddFormConfig } from '../configs/dddFormConfig';
 import { ref } from 'vue';
 

@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IconItemProps } from '../types/types';
+import type { IconItemProps } from '@/shared/types/index';
 
 
 const props = defineProps<IconItemProps>()

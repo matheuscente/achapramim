@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import BaseButton from '../components/BaseButton.vue';
+import BaseButton from '../components/BaseButton/BaseButton.vue';
 import { back } from '../utils/btnBack.ts';
 
 </script>

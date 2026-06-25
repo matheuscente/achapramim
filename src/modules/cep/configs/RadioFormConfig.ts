@@ -1,4 +1,4 @@
-import type { BaseRadioProps } from "@/shared/types/types";
+import type { BaseRadioProps } from "@/shared/types";
 
 const radioConfig: BaseRadioProps = {
     name: "Cep",

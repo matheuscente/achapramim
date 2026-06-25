@@ -12,7 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseRadioProps, SearchType } from '../types/types';
+import type { BaseRadioProps } from '@/shared/types';
+import type { SearchType } from '@/shared/types';
 
 const props = defineProps<BaseRadioProps>()
 const checked = defineModel<SearchType>()

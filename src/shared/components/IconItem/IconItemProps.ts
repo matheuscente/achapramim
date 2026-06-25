@@ -1,4 +1,4 @@
-export interface IconItemProps {
+interface IconItemProps {
     href: string,
     src: string,
     width: number,
@@ -6,4 +6,8 @@ export interface IconItemProps {
     alt: string,
     ariaLabel: string,
     target?: string
+}
+
+export type {
+    IconItemProps
 }

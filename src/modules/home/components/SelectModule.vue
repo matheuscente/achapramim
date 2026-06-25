@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 
-import BaseButton from '@/shared/components/BaseButton.vue';
+import BaseButton from '@/shared/components/BaseButton/BaseButton.vue';
 import { goPage } from '@/shared/utils/goPage';
 import type { SelectModuleProps } from '@/modules/home/types/types';
 

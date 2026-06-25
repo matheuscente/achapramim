@@ -1,4 +1,4 @@
-import type { BtnProps, BtnType, RouteName } from "@/shared/types/types";
+import type { BtnType, RouteName } from "@/shared/types";
 
 export interface SelectModuleProps {
     button: BtnType,

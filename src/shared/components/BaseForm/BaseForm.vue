@@ -8,9 +8,9 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseInputProps } from '../types/types.ts';
-import BaseInput from './BaseInput.vue';
-import FormButtons from './FormButtons.vue';
+import type { BaseInputProps } from '../../types/index.ts';
+import BaseInput from '@/shared/components/BaseInput/BaseInput.vue';
+import FormButtons from '@/shared/components/FormButtons/FormButtons.vue';
 
 const props = defineProps<BaseInputProps>()
 const value = defineModel<string>()

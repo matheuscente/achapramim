@@ -4,7 +4,7 @@
 </template>
 
 <script setup lang="ts">
-import type { SearchType } from '@/shared/types/types.ts';
+import type { SearchType } from '@/shared/types/index.ts';
 import CepForm from '../components/CepForm.vue';
 import AddressForm from '../components/AddressForm.vue';
 import { ref } from 'vue';
@@ -12,9 +12,8 @@ import type { AddressValidation } from '../types/types.ts';
 
 const searchType = ref<SearchType>("C")
 
-
 const handleSearch = (data: string | AddressValidation) => {
-    console.log(data)
+    console.log(typeof data !== "string" ? data.data : data)
 }
 
 </script>

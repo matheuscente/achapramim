@@ -1,4 +1,4 @@
-import type { IconItemProps, MenuItemProps } from "../types/types"
+import type { IconItemProps, MenuItemProps } from "@/shared/types/index"
 import logo from "@/assets/images/logo.png"
 
 export const headerProps: {

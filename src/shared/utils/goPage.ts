@@ -1,5 +1,5 @@
 import router from "@/app/router"
-import type { RouteName } from "../types/types"
+import type { RouteName } from "../types"
 
 export const goPage = (routeName: RouteName) => {
     router.push({

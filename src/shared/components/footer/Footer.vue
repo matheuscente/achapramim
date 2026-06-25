@@ -1,15 +1,17 @@
 <template>
-    <footer>
-        <div>
-            <IconItem v-bind="linkedinIconConfig" />
-            <IconItem v-bind="githubIconConfig" />
-        </div>
+    <footer class="footer">
+        <ExternalList :itens="contactFooterItens" />
     </footer>
 </template>
 
 <script setup lang="ts">
-import IconItem from '@/shared/components/IconItem.vue';
-import { linkedinIconConfig, githubIconConfig } from '@/shared/components/footer/footer';
+import { contactFooterItens } from '@/shared/configs/contacts.ts';
+import ExternalList from '../ExternalList/ExternalList.vue';
+
 </script>
 
-<style scoped></style>
+<style scoped>
+.footer {
+    background-color: gray;
+}
+</style>
