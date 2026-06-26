@@ -12,7 +12,7 @@ import BaseForm from '@/shared/components/BaseForm/BaseForm.vue';
 import { formCepConfig } from "@/modules/cep/configs/CepFormConfig"
 import RadioForm from './RadioForm.vue';
 import type { SearchType } from '@/shared/types/index.ts';
-import { reactive, watch } from 'vue';
+import { reactive } from 'vue';
 import type { CepValidation } from '@/modules/cep/types/CepValidation.ts';
 import { useValidation } from '@/shared/composables/useValidation.ts';
 import { cepSchema } from '../schemas/cep.schema.ts';

@@ -1,7 +1,7 @@
 <template>
     <div>
         <fieldset>
-            <BaseInput v-bind="props" v-model="value" />
+            <BaseInput v-bind="props" v-model="value" :error="props.error" />
         </fieldset>
         <FormButtons />
     </div>
