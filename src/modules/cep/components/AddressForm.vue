@@ -19,6 +19,7 @@ import { reactive } from "vue";
 import FormButtons from "@/shared/components/FormButtons/FormButtons.vue";
 import { useValidation } from "@/shared/composables/useValidation.ts";
 import { addressSchema } from "../schemas/address.schema.ts";
+import type { SearchData } from "../types/SearchData.ts";
 
 const {
     errors,
@@ -36,14 +37,21 @@ const formData = reactive<AddressValidation>({
 })
 
 const emit = defineEmits<{
-    addressSearch: [address: AddressValidation]
+    "address-search": [data: SearchData],
+    "input-error": []
 
 }>()
 
 const search = () => {
     const validatedData = validate(formData)
-    if (!validatedData) return
-    emit("addressSearch", formData)
+    if (!validatedData) {
+        emit("input-error")
+        return
+    }
+    emit("address-search", {
+        searchType: "A",
+        data: validatedData.data
+    })
 }
 
 

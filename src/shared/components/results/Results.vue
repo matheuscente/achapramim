@@ -1,20 +1,25 @@
 <template>
-    <ul>
-        <li v-for="item in props.itens" :key="item.id">
-            <span>Rua: {{ item.street }}</span>
-            <span>Cidade: {{ item.city }}</span>
-            <span>Estado: {{ item.state }}</span>
-            <span>Cep: {{ item.cep }}</span>
-            <span>DDD: {{ item.DDD }}</span>
-        </li>
-    </ul>
+    <div>
+        <h1>resultados</h1>
+        <ul v-if="!error">
+            <li v-for="(item, index) in props.itens" :key="index">
+                <div v-for="(value, key) in item" :key="String(key)">
+                    <span v-if="value">{{ key }}: {{ value }}</span>
+                </div>
+            </li>
+        </ul>
+        <span v-else>
+            {{ error }}
+        </span>
+    </div>
 </template>
 
-<script setup lang="ts">
-import type { CepResultProps } from './CepResultsProps';
+<script setup lang="ts" generic="T extends Record<string, unknown>">
 
 
 const props = defineProps<{
-    itens: CepResultProps[]
+    itens: T[],
+    error: string | null | undefined
 }>()
+
 </script>

@@ -1,3 +1,5 @@
+import type { DddApiResponse } from "@/modules/ddd/types/dddApiResponse"
+
 class HttpError extends Error {
     constructor(
         public readonly status: number,

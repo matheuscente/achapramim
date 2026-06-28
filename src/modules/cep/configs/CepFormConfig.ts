@@ -1,5 +1,5 @@
-import type { BaseInputProps } from "@/shared/types";
-import type { AddressValidation, CepValidation, FormFieldConfig } from "@/modules/cep/types/types";
+import type { AddressValidation, CepValidation } from "@/modules/cep/types/types";
+import type { FormFieldConfig } from "@/shared/types";
 
 //formCepConfig para passar as informações pro formulario
 //tipo passado no generico deve conter apenas os campos a serem validados (que fazem parte da camada de dados)

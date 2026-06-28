@@ -6,7 +6,7 @@ import type { ErrorType } from "../types";
 const useValidation = <T extends ErrorType<T>>(schema: ZodType) => {
     const errors = ref<ErrorType<T>>({})
 
-    const validate = (data: unknown) => {
+    const validate = (data: unknown): {data: T} | null => {
         errors.value = {}
 
         const result = schema.safeParse(data)
@@ -15,6 +15,8 @@ const useValidation = <T extends ErrorType<T>>(schema: ZodType) => {
             errors.value = mapErrors(result.error.issues)
             return null
         }
+
+        return result.data as { data: T }
     }
 
     const mapErrors = (issues: $ZodIssue[]) => {

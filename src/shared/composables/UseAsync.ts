@@ -35,3 +35,8 @@ const useAsync = <T, P>(fn: (param: P) => Promise<T>) => {
         execute
     }
 }
+
+export {
+
+    useAsync
+}

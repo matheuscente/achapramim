@@ -5,7 +5,21 @@ import { HttpStatus } from "@/shared/services/http/HttpStatus"
 import type { AddressValidation } from "@/modules/cep/types/AddressValidation"
 
 const searchCepService = {
+    mapData (data: CepApiResponse)  {
+        if("localidade" in data) {
+            return {
+            localidade: data.localidade,
+            estado: data.estado,
+            uf: data.uf,
+            ddd: data.ddd,
+            logradouro: data.logradouro,
+            cep: data.cep 
+    }
+        }
+    },
+
     async withCep(cep: string): Promise<CepApiResponse> {
+        console.log(import.meta.env.VITE_CEP_URL)
         const { data } = await cepHttp.get<CepApiResponse>(`/${cep}/json`)
 
         if ("erro" in data) {
@@ -15,8 +29,7 @@ const searchCepService = {
 
             )
         }
-
-        return data
+        return searchCepService.mapData(data) as CepApiResponse
     },
 
     async withAddress(address: AddressValidation): Promise<CepApiResponse[]> {
@@ -26,7 +39,7 @@ const searchCepService = {
             HttpStatus.NOT_FOUND,
             "nenhum cep encontrado para esse endereço"
         )
-        return data
+        return data.map(searchCepService.mapData) as CepApiResponse[]
     }
 }
 

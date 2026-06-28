@@ -16,6 +16,7 @@ import { reactive } from 'vue';
 import type { CepValidation } from '@/modules/cep/types/CepValidation.ts';
 import { useValidation } from '@/shared/composables/useValidation.ts';
 import { cepSchema } from '../schemas/cep.schema.ts';
+import type { SearchData } from '../types/SearchData.ts';
 
 const {
     errors,
@@ -33,17 +34,21 @@ const formData = reactive<CepValidation>({
 })
 
 const emit = defineEmits<{
-    cepSearch: [cep: string]
+    "cep-search": [SearchData],
+    "input-error": []
 }>()
 
 
 const search = () => {
     const validatedData = validate(formData)
     if (!validatedData) {
+        emit("input-error")
         return
     }
-
-    emit("cepSearch", formData.data.cep)
+    emit("cep-search", {
+        searchType: "C",
+        data: validatedData.data.cep
+    })
 }
 
 
