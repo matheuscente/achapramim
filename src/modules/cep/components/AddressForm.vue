@@ -1,10 +1,11 @@
 <template>
-    <form @submit.prevent="search">
-        <div>
-            <RadioForm v-model="searchType" />
+    <form @submit.prevent="search" class="address-form">
+        <RadioForm class="radio-address-form" v-model="searchType" />
+        <div class="input-conteiner">
+            <BaseInput class="address-form-input" v-for="field in formAddressConfig" :key="field.id" v-bind="field"
+                v-model="formData.data[field.field]" :error="errors[field.field]" />
         </div>
-        <BaseInput v-for="field in formAddressConfig" :key="field.id" v-bind="field"
-            v-model="formData.data[field.field]" :error="errors[field.field]" />
+
         <FormButtons />
     </form>
 </template>
@@ -57,4 +58,29 @@ const search = () => {
 
 </script>
 
-<style></style>
+<style scoped>
+.address-form-input {
+    flex: 1;
+}
+
+.address-form {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.radio-address-form {
+    margin-bottom: 0px;
+}
+
+.input-conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+</style>

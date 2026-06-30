@@ -1,6 +1,7 @@
 <template>
     <footer class="footer">
-        <ExternalList :itens="contactFooterItens" />
+            <ExternalList :itens="contactFooterItens" />
+
     </footer>
 </template>
 
@@ -12,6 +13,12 @@ import ExternalList from '../ExternalList/ExternalList.vue';
 
 <style scoped>
 .footer {
-    background-color: gray;
+    background-color: var(--cor7);
+    box-shadow: -3px -3px 1em var(--cor4);
+    display: flex;
+    justify-content: center;
+    height: 88px;
+    
+    width: 100%;
 }
 </style>

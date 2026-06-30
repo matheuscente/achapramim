@@ -1,7 +1,10 @@
 <template>
-    <fieldset>
-        <BaseRadio v-bind="radioConfig" v-model="searchType" />
-    </fieldset>
+    <div class="form-radio">
+        <fieldset class="conteiner-radio">
+            <BaseRadio v-bind="radioConfig" v-model="searchType" />
+        </fieldset>
+    </div>
+    
 </template>
 
 <script setup lang="ts">
@@ -14,4 +17,14 @@ const searchType = defineModel<SearchType>({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+    .conteiner-radio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-radio {
+        margin-bottom: 1.5rem;
+    }
+</style>

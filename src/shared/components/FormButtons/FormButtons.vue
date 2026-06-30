@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="conteiner-btn">
         <BaseButton type="submit">
             Pesquisar
         </BaseButton>
@@ -19,7 +19,22 @@ const handleClick = () => {
     goPage("Home")
 }
 
-
 </script>
 
-<style></style>
+<style scoped>
+    .conteiner-btn {
+        display: flex;
+        gap: 2rem;
+    }
+    @media (max-width: 400px) {
+    .conteiner-btn  {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .conteiner {
+        zoom: 80%;
+    }
+}
+</style>

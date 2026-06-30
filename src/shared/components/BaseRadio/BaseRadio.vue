@@ -1,13 +1,16 @@
 <template>
-    <div>
-        <legend v-if="props.legend">
+    <div class="conteiner">
+        <legend class="font-principal" v-if="props.legend">
             {{ props.legend }}
         </legend>
 
-        <label v-for="option in props.options" :key="option.value">
+        <div class="radio-item font-paragrafo">
+            <label v-for="option in props.options" :key="option.value">
             <input type="radio" :name="props.name" :value="option.value" v-model="checked">
             {{ option.label }}
         </label>
+        </div>
+
     </div>
 </template>
 
@@ -21,4 +24,32 @@ const checked = defineModel<SearchType>()
 
 </script>
 
-<style scoped></style>
+<style scoped>
+    .conteiner {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .radio-item {
+        display: flex;
+        gap: .3rem;
+        align-items: center;
+        flex: 1;
+        cursor: pointer
+    }
+
+    .radio-item input,
+    .radio-item label {
+        cursor: inherit
+    }
+
+    @media (max-width: 500px) {
+    .conteiner {
+        flex-direction: column;
+        gap: .6rem;
+    }
+}
+</style>

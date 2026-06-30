@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="font-paragrafo input">
         <label :for="props.id">
             {{ props.label }}
         </label>
@@ -19,4 +19,21 @@ const value = defineModel<string>()
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.input {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+    .font-paragrafo input,
+    .font-paragrafo label {
+        font: inherit;
+    }
+
+    .font-paragrafo input {
+        padding: 8px;
+        border-radius: 4px;
+    }
+</style>

@@ -10,8 +10,8 @@ const contactFooterItens: ContactListConfig[] = [
     {
         href: "https://www.linkedin.com/in/vicente-dos-santos-b48805196/",
         src: linkedinFooterIcon,
-        width: 98,
-        height: 96,
+        width: 48,
+        height: 48,
         alt: "logo do linkedin",
         ariaLabel: "botão redirecionando para o linkedin do autor do site",
         target: "_blank",
@@ -20,8 +20,8 @@ const contactFooterItens: ContactListConfig[] = [
     {
         href: "https://github.com/matheuscente",
         src: githubIcon,
-        width: 98,
-        height: 96,
+        width: 48,
+        height: 48,
         alt: "logo do github",
         ariaLabel: "botão redirecionando para o github do autor do site",
         target: "_blank",
