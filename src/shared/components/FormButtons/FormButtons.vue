@@ -26,15 +26,16 @@ const handleClick = () => {
         display: flex;
         gap: 2rem;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
     .conteiner-btn  {
         flex-direction: column;
         gap: 1.5rem;
-    }
-}
-@media (max-width: 500px) {
-    .conteiner {
         zoom: 80%;
     }
+
+    .conteiner-btn button {
+        width: 100%;
+    }
 }
+
 </style>

@@ -29,4 +29,5 @@ const value = defineModel<string>()
         flex-wrap: wrap;
         justify-content: center;
     }
+
 </style>

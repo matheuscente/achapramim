@@ -15,6 +15,8 @@ const props = defineProps<IconItemProps>()
 <style scoped>
 .icon-item {
     width: 48px;
+    height: 48px;
+    display: inline-block;
 }
 
 .icon-item img:hover {
@@ -24,6 +26,7 @@ const props = defineProps<IconItemProps>()
 .icon-item img {
     transition: transform 0.2s ease;
     transform-origin: center;
-    width: inherit;
+    width: 100%;
+    height: 100%;
 }
 </style>

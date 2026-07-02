@@ -18,6 +18,8 @@ import Header from '@/shared/components/header/Header.vue';
 <style scoped>
     .conteiner {
         max-width: 1200px;
+        margin: 0 auto;
+        padding: 5rem;
     }
 
     .full-page {
@@ -25,5 +27,11 @@ import Header from '@/shared/components/header/Header.vue';
         flex-direction: column;
         justify-content: space-between;
         height: 100vh;
+    }
+
+    @media(max-width: 900px) {
+        .conteiner {
+            padding: 1.5rem;
+        }
     }
 </style>

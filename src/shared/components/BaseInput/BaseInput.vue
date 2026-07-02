@@ -36,4 +36,16 @@ const value = defineModel<string>()
         padding: 8px;
         border-radius: 4px;
     }
+
+    @media (max-width: 500px) {
+    .input {
+        flex-direction: column;
+        gap: .5rem;
+        align-items:start;
+    }
+
+    .input input {
+        max-width: 80vw;
+    }
+}
 </style>

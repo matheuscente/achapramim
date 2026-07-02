@@ -22,6 +22,11 @@ const props = defineProps<{
       gap: 2rem;
       padding: 20px;
       width: fit-content;
+      align-items: center;
+    }
 
+    .conteiner li {
+        width: 48px;
+        height: 48px;
     }
 </style>
